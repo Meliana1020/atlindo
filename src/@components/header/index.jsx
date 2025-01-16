@@ -6,7 +6,7 @@ const Header = () => {
             <div className="logo">
                 <img src={logoPt} alt='gambar' />
                 <div className='title-logo'>
-                    <p>PT.Altindo</p >
+                    <p>PT. Altindo</p >
                     <p>Mitra Perkasa</p>
                 </div>
             </div>
