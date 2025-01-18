@@ -1,6 +1,10 @@
+import { SliderHeroSection } from "../slickSlider";
+
 const Hero = () => {
     return (
-        <section>kwkw</section>
+        <section>
+            <SliderHeroSection />
+        </section>
     )
 }
 export default Hero;
