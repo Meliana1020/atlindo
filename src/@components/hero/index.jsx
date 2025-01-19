@@ -1,7 +1,7 @@
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import { heroSection } from "../../@damiData";
+import { heroSection } from "../../../@damiData";
 import './index.scss'
 
 
@@ -29,7 +29,7 @@ function SamplePrevArrow(props) {
     );
 }
 
-export const SliderHeroSection = () => {
+const SliderHeroSection = () => {
     const settings = {
         dots: true,
         infinite: true,

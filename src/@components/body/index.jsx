@@ -1,10 +1,17 @@
-import { SliderHeroSection } from "../slickSlider";
+import AboutUsSection from "./section/about-us";
+import HeroSection from "./section/hero"
 
-const Hero = () => {
+const Body = () => {
     return (
-        <section>
-            <SliderHeroSection />
-        </section>
+        <div>
+            <section>
+                <HeroSection />
+            </section>
+            <section>
+                <AboutUsSection />
+            </section>
+        </div>
     )
 }
-export default Hero;
+
+export default Body;
