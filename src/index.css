@@ -10,3 +10,7 @@ body {
 p {
   margin: 0px;
 }
+
+.pad-all {
+  margin: 50px 30px;
+}

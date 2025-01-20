@@ -1,3 +1,25 @@
-.title-about {
-    border: 1px solid red;
+.container-about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .title-about {
+        h1 {
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 36px;
+        }
+    }
+
+    .teks-about {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+        width: 780px;
+
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 27px;
+    }
 }

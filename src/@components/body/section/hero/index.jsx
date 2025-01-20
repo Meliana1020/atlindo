@@ -12,9 +12,19 @@ function SampleNextArrow(props) {
     return (
         <div
             className={className}
-            style={{ ...style, display: "block", background: "red", border: '1px solid red' }}
+            style={{
+                ...style,
+                display: "flex",
+                alignItems: "center",
+                background: "white",
+                cursor: "pointer",
+            }}
             onClick={onClick}
-        />
+        >
+            <svg width="31" height="39" viewBox="0 0 31 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.8264 9.91666L19.4722 19.5833L11.8264 29.25" stroke="#100303" strokeWidth="2" />
+            </svg>
+        </div>
     );
 }
 
@@ -23,24 +33,34 @@ function SamplePrevArrow(props) {
     return (
         <div
             className={className}
-            style={{ ...style, display: "block", background: "green" }}
+            style={{
+                ...style,
+                display: "flex",
+                alignItems: "center",
+                background: "white",
+                cursor: "pointer",
+            }}
             onClick={onClick}
-        />
+        >
+            <svg width="31" height="39" viewBox="0 0 31 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.4828 9.91666L11.837 19.5833L19.4828 29.25" stroke="#100303" strokeWidth="2" />
+            </svg>
+        </div>
     );
 }
 
 const HeroSection = () => {
     const settings = {
-        dots: true,
         infinite: true,
         slidesToShow: 1.5,
         slidesToScroll: 1,
         nextArrow: <SampleNextArrow />,
         prevArrow: <SamplePrevArrow />,
-        variableWidth: true
+        variableWidth: true,
+        speed: 1000
     };
     return (
-        <div className="slider-wrapper">
+        <div className="slider-wrapper pad-all">
             <Slider {...settings}>
                 {
                     heroSection.map((item, index) => {

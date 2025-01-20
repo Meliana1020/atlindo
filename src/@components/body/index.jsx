@@ -3,7 +3,7 @@ import HeroSection from "./section/hero"
 
 const Body = () => {
     return (
-        <div>
+        <div className="container-body">
             <section>
                 <HeroSection />
             </section>
