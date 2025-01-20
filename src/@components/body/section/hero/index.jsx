@@ -60,7 +60,7 @@ const HeroSection = () => {
         speed: 1000
     };
     return (
-        <div className="slider-wrapper pad-all">
+        <div className="slider-wrapper marg-all">
             <Slider {...settings}>
                 {
                     heroSection.map((item, index) => {

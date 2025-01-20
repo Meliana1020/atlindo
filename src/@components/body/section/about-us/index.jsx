@@ -1,7 +1,7 @@
 import './index.scss'
 const AboutUsSection = () => {
     return (
-        <section className='container-about pad-all'>
+        <section className='container-about marg-all'>
             <div className="title-about">
                 <h1>About Us</h1>
             </div>
