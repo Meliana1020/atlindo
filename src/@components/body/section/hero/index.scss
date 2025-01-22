@@ -1,13 +1,14 @@
 .slider-wrapper {
-    height: 350px;
+    padding-top: 10px !important;
+    height: 430px;
 
     .slider-item {
 
         .slider-img {
             width: 100%;
-            height: 350px;
+            height: 430px;
             object-fit: cover;
-            border-radius: 20px;
+            border-radius: 24px;
         }
     }
 
@@ -16,28 +17,4 @@
         width: 7%;
     }
 
-    .slick-prev {
-        z-index: 2;
-        position: absolute;
-        left: 907px;
-        border-top-left-radius: 32px;
-        border-bottom-left-radius: 32px;
-        padding: 20px 15px 20px 0px;
-    }
-
-
-    .slick-next {
-        z-index: 2;
-        position: absolute;
-        right: 339px;
-        padding: 20px 20px 20px 0px;
-        border-top-right-radius: 32px;
-        border-bottom-right-radius: 32px;
-
-    }
-
-    .slick-arrow {
-        top: 290px;
-        width: 50px;
-    }
 }
