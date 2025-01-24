@@ -1,0 +1,35 @@
+.container-project {
+    display: flex;
+    flex-direction: column;
+    gap: 65px;
+    text-align: center;
+
+    .project {
+        .slider-container {
+
+
+            .slick-prev,
+            .slick-next {
+                display: none !important;
+            }
+
+            .custom-next-arrow,
+            .custom-prev-arrow {
+                display: block !important;
+            }
+
+            .slick-track {
+                display: flex;
+                gap: 85px;
+            }
+
+            .slick-img {
+                img {
+                    width: 479.39px;
+                    height: 414px;
+                    border-radius: 32px;
+                }
+            }
+        }
+    }
+}
