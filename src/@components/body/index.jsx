@@ -2,6 +2,7 @@ import './index.scss'
 import AboutUsSection from "./section/about-us";
 import ContactUsSection from './section/contact-us';
 import HeroSection from "./section/hero"
+import LocationSection from './section/location';
 import OurCustomerSection from './section/our-customer';
 import ProductSection from "./section/product";
 import ProjectSection from "./section/project";
@@ -27,6 +28,9 @@ const Body = () => {
             </div>
             <div className='section-contact-us' id='contact'>
                 <ContactUsSection />
+            </div>
+            <div className='section-location' id='location'>
+                <LocationSection />
             </div>
         </section>
     )

@@ -1,0 +1,43 @@
+.container-location {
+    display: flex;
+    justify-content: space-between;
+
+    .col-left {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        .text {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+
+            .text-col {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+
+                span {
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 24px;
+                }
+
+
+                .telp {
+                    color: black;
+                }
+
+                .sosial-media {
+                    color: blue;
+                }
+            }
+        }
+    }
+
+    .col-right {
+        iframe {
+            border-radius: 24px;
+        }
+    }
+}

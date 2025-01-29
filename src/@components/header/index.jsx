@@ -37,6 +37,7 @@ const Header = () => {
                 <p onClick={() => { handleScroll('project'); }} style={active == 'project' ? { color: '#F58322' } : { color: 'black' }}>Projek</p>
                 <p onClick={() => { handleScroll('customer'); }} style={active == 'customer' ? { color: '#F58322' } : { color: 'black' }}>Our Customer</p>
                 <p onClick={() => { handleScroll('contact'); }} style={active == 'contact' ? { color: '#F58322' } : { color: 'black' }}>Contact Us</p>
+                <p onClick={() => { handleScroll('location'); }} style={active == 'location' ? { color: '#F58322' } : { color: 'black' }}>Location</p>
             </div>
         </section>
     )
