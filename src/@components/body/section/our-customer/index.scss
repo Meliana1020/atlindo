@@ -1,0 +1,33 @@
+.container-our-customer {
+    display: flex;
+    flex-direction: column;
+    gap: 65px;
+
+
+    .header-our-customer {
+        text-align: center;
+        width: 100%;
+    }
+
+    .logo-customer {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 50px;
+
+        .list-customer {
+            height: 84px;
+
+            .col-customer {
+                height: 84px;
+                width: 100%;
+
+                img {
+                    width: 100%;
+                    height: 50px;
+                    object-fit: cover; // Menghindari gambar terdistorsi
+                }
+            }
+        }
+    }
+}

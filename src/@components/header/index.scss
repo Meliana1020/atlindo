@@ -1,24 +1,36 @@
 .container-header {
     display: flex;
     justify-content: space-between;
-    padding: 20px 40px;
-
+    padding: 15px 40px;
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: white;
+    border: 1px solid rgb(245, 205, 130);
 
     .logo {
         display: flex;
         gap: 20px;
         align-items: center;
+        cursor: pointer;
 
         img {
             height: 50px;
-            width: 50px;
+            width: 100%;
         }
 
     }
 
     .navbar-menu {
+        p {
+            cursor: pointer;
+        }
+
         display: flex;
         gap: 20px;
         align-items: center;
+
+
     }
 }

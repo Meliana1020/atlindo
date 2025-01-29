@@ -1,5 +1,5 @@
 import Slider from "react-slick";
-import product from "../../../data/data-product";
+import { project } from "../../../data/data-product";
 
 function SampleNextArrow(props) {
     const { style, onClick } = props;
@@ -9,7 +9,7 @@ function SampleNextArrow(props) {
             style={{
                 ...style,
                 position: 'absolute',
-                right: '-20px',
+                right: '-1px',
                 top: '193px',
                 cursor: 'pointer'
             }}
@@ -88,11 +88,14 @@ export function SlickProject() {
     return (
         <div className="slider-container">
             <Slider {...settings}>
-                {product.map((item, index) => {
+                {project.map((item, index) => {
                     const img = item?.img
+                    const nameProduct = item?.nameProduct
                     return (
                         <div className="slick-img" key={index}>
                             <img src={img} onClick={() => { console.log(index, 'sss') }} />
+                            <span>{nameProduct}</span>
+                            {console.log(index, 's')}
                         </div>
                     )
                 })}

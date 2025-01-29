@@ -1,0 +1,42 @@
+.container-contact-us {
+    padding: 75px 0px !important;
+    position: relative;
+    height: 470px;
+
+
+    .img-contact {
+        img {
+            width: 100%;
+            height: 470px;
+            object-fit: cover;
+        }
+    }
+
+    .text-contact {
+        top: 75px;
+        width: 100%;
+        height: 450px;
+        z-index: 2;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        background: rgba(0, 0, 0, 0.5);
+
+        a {
+            padding: 24px 47px;
+            border: 4px solid #FFCC2A;
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 48px;
+            color: white;
+            text-decoration: none;
+
+        }
+
+        a:hover {
+            background: #F58322;
+        }
+    }
+}

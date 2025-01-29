@@ -1,20 +1,34 @@
+import './index.scss'
 import AboutUsSection from "./section/about-us";
+import ContactUsSection from './section/contact-us';
 import HeroSection from "./section/hero"
+import OurCustomerSection from './section/our-customer';
 import ProductSection from "./section/product";
+import ProjectSection from "./section/project";
+
 
 const Body = () => {
     return (
-        <div className="container-body">
-            <section className="section-hero">
+        <section className="container-body">
+            <div className="section-hero" id="hero">
                 <HeroSection />
-            </section>
-            <section className="section-about">
+            </div >
+            <div className="section-about" id="about">
                 <AboutUsSection />
-            </section>
-            <section className="section-product">
+            </div>
+            <div className="section-product" id="product">
                 <ProductSection />
-            </section>
-        </div>
+            </div>
+            <div className="section-project" id="project">
+                <ProjectSection />
+            </div>
+            <div className='section-our-customer' id='customer'>
+                <OurCustomerSection />
+            </div>
+            <div className='section-contact-us' id='contact'>
+                <ContactUsSection />
+            </div>
+        </section>
     )
 }
 
