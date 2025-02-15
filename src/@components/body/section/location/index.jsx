@@ -37,7 +37,9 @@ const LocationSection = () => {
             </section>
             <section className='container-location-mobile marg-all'>
                 <div className='col-top'>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.537439106904!2d106.98914207523933!3d-6.324319293665164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e699350b144ee97%3A0x4baa1e7a4c7a867d!2sPT%20ALTINDO%20MITRA%20PERKASA!5e0!3m2!1sid!2sid!4v1738119113966!5m2!1sid!2sid" width="600" height="450" style={{ border: 0 }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.537439106904!2d106.98914207523933!3d-6.324319293665164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e699350b144ee97%3A0x4baa1e7a4c7a867d!2sPT%20ALTINDO%20MITRA%20PERKASA!5e0!3m2!1sid!2sid!4v1738119113966!5m2!1sid!2sid" width="600" height="450" style={{ border: 0 }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade">
+                        <a style={{ background: 'black', padding: '10px' }} href='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.537439106904!2d106.98914207523933!3d-6.324319293665164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e699350b144ee97%3A0x4baa1e7a4c7a867d!2sPT%20ALTINDO%20MITRA%20PERKASA!5e0!3m2!1sid!2sid!4v1738119113966!5m2!1sid!2sid'></a>
+                    </iframe>
                 </div>
                 <div className='col-bottom'>
                     <h2>PT. ALTINDO MITRA PERKASA</h2>
