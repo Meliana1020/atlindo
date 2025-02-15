@@ -20,7 +20,6 @@ import Cctv from '../images/img-product/electrical/CCTV.png'
 import AccessControl from '../images/img-product/electrical/Access-control.png'
 import SarungTangan from '../images/img-product/consumable/sarung-tangan.png'
 import MaskingLine from '../images/img-product/consumable/masking-line.png'
-
 import Bearing from '../images/img-product/mechanical/Bearing.png'
 
 

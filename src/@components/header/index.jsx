@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './index.scss'
-import logoPt from '/images/Logo-Pt.jpeg'
+import logoPt from '../data/images/Logo-Pt.jpeg'
 import { useEffect } from 'react'
 import {
     Menu,
