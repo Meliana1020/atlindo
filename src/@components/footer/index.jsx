@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <section className='container-foot'>
             <div className='text-foot'>
-                <p>© 2025 PT. ALTINDO MITRA PERKASA</p>
+                <p>© 2025 PT. Altindo Mitra Perkasa</p>
             </div>
         </section>
     )

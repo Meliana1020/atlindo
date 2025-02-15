@@ -3,39 +3,62 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import './index.scss'
 import { heroSection } from "../../../data/data-product";
-import { useRef } from "react";
-
-
-// Slider Otomatis Hero Section
-
+import { useEffect, useRef, useState } from "react";
 
 
 const HeroSection = () => {
-    let sliderRef = useRef(null);
+    const sliderRef = useRef(null);
+    const [getWitdh, setGetWitdh] = useState({
+        width: undefined
+    })
+
 
     const settings = {
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 3000,
-        cssEase: "linear",
+        autoplaySpeed: 2500,
+        speed: 1000,
+        cssEase: "ease-in-out",
         pauseOnHover: false,
     };
+
+    useEffect(() => {
+
+        function handleResize() {
+            const witdh = document.documentElement.clientWidth
+            setGetWitdh(witdh)
+        }
+        window.addEventListener('resize', handleResize)
+        handleResize()
+        return () => window.addEventListener('resize', handleResize)
+    }, [])
+
 
     return (
         <div className="container-hero">
             <div className="slider-wrapper marg-all" >
                 <Slider ref={sliderRef} {...settings}>
                     {
-                        heroSection.map((item, index) => {
-                            const img = item.img
-                            return (
-                                <div key={index} className='slider-item' >
-                                    <img src={img} className="slider-img" onClick={() => { console.log('index', index) }} />
-                                </div>
-                            )
-                        })
+                        getWitdh > 700 ?
+                            heroSection.map((item, index) => {
+                                const img = item.img
+                                return (
+                                    <div key={index} className='slider-item' >
+                                        <img src={img} className="slider-img" onClick={() => { console.log('index', index) }} />
+                                    </div>
+                                )
+                            })
+                            :
+                            heroSection.map((item, index) => {
+                                const img = item.imgMobile
+                                return (
+                                    <div key={index} className='slider-item' >
+                                        <img src={img} className="slider-img" onClick={() => { console.log('index', index) }} />
+                                    </div>
+                                )
+                            })
                     }
                 </Slider>
             </div>

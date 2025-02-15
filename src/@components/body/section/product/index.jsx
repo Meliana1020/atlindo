@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import { product } from '../../../data/data-product';
 import './index.scss';
+import { SlickProduct } from './slickProduct';
 
 const ProductSection = () => {
-    const [getNameProduct, setGetNameProduct] = useState('Comsumable');
+
+    const [getNameProduct, setGetNameProduct] = useState('Consumable');
 
     return (
         <section className="container-product marg-all">
@@ -12,20 +14,7 @@ const ProductSection = () => {
             </div>
             <div className="product">
                 <div className="img">
-                    {
-                        product.map((item) => {
-                            if (item?.nameProduct === getNameProduct) {
-                                return (
-                                    <div key={item?.nameProduct} className="img-container">
-                                        {item?.img?.map((imgSrc, index) => (
-                                            <img key={index} src={imgSrc} alt={`${item?.nameProduct}-${index}`} />
-                                        ))}
-                                    </div>
-                                );
-                            }
-                            return null
-                        })
-                    }
+                    <SlickProduct getNameProduct={getNameProduct} />
                 </div>
                 <div className="menu-product">
                     {

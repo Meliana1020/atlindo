@@ -1,21 +1,25 @@
 import Slider from "react-slick";
 import { project } from "../../../data/data-product";
 
+
 function SampleNextArrow(props) {
-    const { style, onClick } = props;
+    const { style, onClick, getWitdh } = props;
+    const ternariTop = getWitdh > 700 ? '193px' : '84px'
+    const ternariRight = getWitdh > 700 ? '-1px' : '-12px'
+    const handleCircle = getWitdh > 700 ? '46' : '26'
     return (
         <div
             className={'custom-next-arrow'}
             style={{
                 ...style,
                 position: 'absolute',
-                right: '-1px',
-                top: '193px',
+                right: ternariRight,
+                top: ternariTop,
                 cursor: 'pointer'
             }}
             onClick={onClick}
         >
-            <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width={handleCircle} height={handleCircle} viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g filter="url(#filter0_d_7_140)">
                     <circle cx="23" cy="19" r="19" fill="white" />
                     <path d="M20.0351 12L26.7252 19L20.0351 26" stroke="#100303" strokeWidth="2" />
@@ -38,21 +42,23 @@ function SampleNextArrow(props) {
 }
 
 function SamplePrevArrow(props) {
-    const { style, onClick } = props;
+    const { style, onClick, getWitdh } = props;
+    const ternariTop = getWitdh > 700 ? '193px' : '84px'
+    const handleCircle = getWitdh > 700 ? '46' : '26'
     return (
         <div
             className={'custom-prev-arrow'}
             style={{
                 ...style,
                 zIndex: '1',
-                top: '193px',
+                top: ternariTop,
                 position: 'absolute',
                 cursor: 'pointer',
-                left: '-23px'
+                left: getWitdh > 700 ? '-22px' : '-12px'
             }}
             onClick={onClick}
         >
-            <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width={handleCircle} height={handleCircle} viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g filter="url(#filter0_d_7_141)">
                     <circle cx="23" cy="19" r="19" fill="white" />
                     <path d="M26.7252 26L20.0351 19L26.7252 12" stroke="#100303" strokeWidth="2" />
@@ -76,17 +82,22 @@ function SamplePrevArrow(props) {
     );
 }
 
-export function SlickProject() {
+export const SlickProject = ({ getWitdh }) => {
+    const slideToShow = getWitdh > 700 ? 3 : 1
+    const variableWidth = getWitdh > 700 ? false : true
     const settings = {
         dots: false,
         infinite: true,
-        slidesToShow: 3,
+        speed: 500,
+        slidesToShow: slideToShow,
         slidesToScroll: 1,
-        nextArrow: <SampleNextArrow />,
-        prevArrow: <SamplePrevArrow />
+        variableWidth: variableWidth,
+        nextArrow: <SampleNextArrow getWitdh={getWitdh} />,
+        prevArrow: <SamplePrevArrow getWitdh={getWitdh} />
     };
     return (
         <div className="slider-container">
+
             <Slider {...settings}>
                 {project.map((item, index) => {
                     const img = item?.img
@@ -104,4 +115,3 @@ export function SlickProject() {
     );
 }
 
-export default SlickProject;

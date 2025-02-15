@@ -6,8 +6,9 @@ const AboutUsSection = () => {
                 <h1>About Us</h1>
             </div>
             <div className='teks-about'>
-                <p>simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
-                <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                <p>PT ALTINDO MITRA PERKASA adalah Perusahaan yang bergerak di bidang engineering, construction dan general trading. Dengan support rekanan dari supplier dan principle company, kami mampu membuat ALTINDO berkembang menjadi salah satu perusahaan terbaik di Indonesia.</p>
+                <p>ALTINDO  telah menangani beberapa proyek baik itu swasta maupun BUMN. Tipe proyek kami tangani adalah gedung perkantoran, apartemen, sekolah/universitas, rumah sakit, pabrik, mall, hotel, tempat ibadah dan bandara.</p>
+                <p>Di setiap proyek yang dikerjakan, ALTINDO selalu memberikan komitmen terbaik kepada pelanggan. Komitmen tersebut adalah dalam segi biaya, kualitas, waktu dan pelayanan. Selain itu, kami juga terus mengembangkan keahlian sumber daya agar dapat selalu memberikan layanan yang lebih baik kepada pelanggan dan dapat bersaing di pasar nasional maupun internasional.</p>
             </div >
         </section>
     )

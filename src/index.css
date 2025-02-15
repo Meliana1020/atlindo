@@ -18,10 +18,24 @@ h5 {
 
 h1 {
   font-size: 32px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 48px;
   color: #F58322;
 }
+
+@media(max-width:700px) {
+  .marg-all {
+    padding: 30px 26px !important;
+  }
+
+  h1 {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 24px;
+  }
+}
+
+
 
 .marg-all {
   padding: 50px 40px;
