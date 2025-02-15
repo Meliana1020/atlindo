@@ -1,5 +1,5 @@
 import Slider from "react-slick";
-import { project } from "../../../data/data-product";
+import { project } from "../../../data/dami-data";
 
 
 function SampleNextArrow(props) {

@@ -1,4 +1,4 @@
-import { customer } from "../../../data/data-product";
+import { customer } from "../../../data/dami-data";
 import './index.scss'
 
 const OurCustomerSection = () => {

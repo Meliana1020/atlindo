@@ -2,7 +2,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import './index.scss'
-import { heroSection } from "../../../data/data-product";
+import { heroSection } from "../../../data/dami-data";
 import { useEffect, useRef, useState } from "react";
 
 

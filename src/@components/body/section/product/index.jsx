@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { product } from '../../../data/data-product';
+import { product } from '../../../data/dami-data';
 import './index.scss';
 import { SlickProduct } from './slickProduct';
 

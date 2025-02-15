@@ -1,5 +1,5 @@
 import Slider from "react-slick";
-import { product } from "../../../data/data-product";
+import { product } from "../../../data/dami-data";
 import { useRef, useEffect } from "react";
 
 
