@@ -33,7 +33,7 @@ import Aruna from '/images/Aruna-Logo-Primary-Color_1.1.1.png'
 import Antika from '/images/LogoAntika.png'
 import Nissin from '/images/nissin.png'
 import Daikin from '/images/Logo+Daikin-1920w.png'
-import Mjm from '/images/Mjm.jpeg'
+// import Mjm from '/images/Mjm.jpeg'
 import Kopi from '/images/kopi.png'
 import Dragon from '/images/Logo-Dragon-Pack.png'
 import Piaggio from '/images/Piaggio-logo.svg.png'
@@ -135,9 +135,11 @@ export const customer = [
         img: Antika
     }, {
         img: Inaco
-    }, {
-        img: Mjm
-    }, {
+    },
+    // {
+    //     img: Mjm
+    // },
+    {
         img: Yanmar
     }, {
         img: Kopi
