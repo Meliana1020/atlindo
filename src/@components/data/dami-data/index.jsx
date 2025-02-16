@@ -21,6 +21,8 @@ import AccessControl from '../images/img-product/electrical/Access-control.png'
 import SarungTangan from '../images/img-product/consumable/sarung-tangan.png'
 import MaskingLine from '../images/img-product/consumable/masking-line.png'
 import Bearing from '../images/img-product/mechanical/Bearing.png'
+import Pompa from '../images/img-product/mechanical/Pompa.png'
+import KawatLas from '../images/img-product/mechanical/Kawat-las.png'
 
 
 // import an img Logo
@@ -75,8 +77,8 @@ export const product = [
         deskripsion: `Kami menyediakan barang logam dan non logam seperti besi, stainless steel, akrilik dan alat bantu mesin seperti tool set, gerinda, mesin bor, mesin las.`,
         img: [
             Bearing,
-            Bearing,
-            Bearing
+            Pompa,
+            KawatLas
 
         ]
     },

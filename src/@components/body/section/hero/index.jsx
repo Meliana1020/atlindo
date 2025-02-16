@@ -22,6 +22,7 @@ const HeroSection = () => {
         speed: 1000,
         cssEase: "ease-in-out",
         pauseOnHover: false,
+        centerPadding: "60px",
     };
 
     useEffect(() => {
