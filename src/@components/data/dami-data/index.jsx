@@ -18,11 +18,21 @@ import Renovasi from '../images/img-project/Renovasi.png'
 import Lampu from '../images/img-product/electrical/Lampu.png'
 import Cctv from '../images/img-product/electrical/CCTV.png'
 import AccessControl from '../images/img-product/electrical/Access-control.png'
+import LampuMobile from '../images/img-product/electrical/mobile/Lampu-mobile.png'
+import CctvMobile from '../images/img-product/electrical/mobile/CCTV-mobile.png'
+import AccessControlMobile from '../images/img-product/electrical/mobile/Access-control-mobile.png'
 import SarungTangan from '../images/img-product/consumable/sarung-tangan.png'
+import KunciInggris from '../images/img-product/consumable/Kunci-inggris.png'
 import MaskingLine from '../images/img-product/consumable/masking-line.png'
+import SarungTanganMobile from '../images/img-product/consumable/mobile/Sarung-tangan-mobile.png'
+import MaskingLineMobile from '../images/img-product/consumable/mobile/Masking-line-mobile.png'
+import KunciInggrisMobile from '../images/img-product/consumable/mobile/Kunci-inggris-mobile.png'
 import Bearing from '../images/img-product/mechanical/Bearing.png'
+import BearingMobile from '../images/img-product/mechanical/mobile/Bearing-mobile.png'
 import Pompa from '../images/img-product/mechanical/Pompa.png'
 import KawatLas from '../images/img-product/mechanical/Kawat-las.png'
+import KawatLasMobile from '../images/img-product/mechanical/mobile/Kawat las.png'
+import PompaMobile from '../images/img-product/mechanical/mobile/Pompa-mobile.png'
 
 
 // import an img Logo
@@ -68,7 +78,12 @@ export const product = [
         img: [
             SarungTangan,
             MaskingLine,
-            Hero1
+            KunciInggris
+        ],
+        imgMobile: [
+            SarungTanganMobile,
+            MaskingLineMobile,
+            KunciInggrisMobile
         ]
     }
     ,
@@ -77,9 +92,13 @@ export const product = [
         deskripsion: `Kami menyediakan barang logam dan non logam seperti besi, stainless steel, akrilik dan alat bantu mesin seperti tool set, gerinda, mesin bor, mesin las.`,
         img: [
             Bearing,
-            Pompa,
-            KawatLas
-
+            KawatLas,
+            Pompa
+        ],
+        imgMobile: [
+            BearingMobile,
+            KawatLasMobile,
+            PompaMobile
         ]
     },
     {
@@ -89,6 +108,11 @@ export const product = [
             Lampu,
             Cctv,
             AccessControl
+        ],
+        imgMobile: [
+            LampuMobile,
+            CctvMobile,
+            AccessControlMobile
         ]
     },
 ]

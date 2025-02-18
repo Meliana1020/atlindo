@@ -1,5 +1,5 @@
 import './index.scss'
-import fotoContractur from '../../../data/images/aboutParagon.jpeg'
+import fotoContractur from '../../../data/images/Contact-us.jpg'
 
 const ContactUsSection = () => {
     return (
