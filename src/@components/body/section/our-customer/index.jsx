@@ -11,10 +11,11 @@ const OurCustomerSection = () => {
                 {
                     customer.map((item, index) => {
                         const img = item?.img
+                        const id = item?.id
                         return (
                             <div className="list-customer" key={index} >
                                 <div className="col-customer">
-                                    <img src={img} />
+                                    <img src={img} style={id !== 'ssk' ? { height: '30px' } : { height: '50px' }} />
                                 </div>
                             </div>
                         )

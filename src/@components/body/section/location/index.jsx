@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons"
+import { faInstagram, faLinkedin, faTiktok } from "@fortawesome/free-brands-svg-icons"
 import './index.scss'
 
 const LocationSection = () => {
@@ -11,7 +11,7 @@ const LocationSection = () => {
                     <div className='text'>
                         <div className="text-col">
                             <span>Alamat</span>
-                            <p>Jl. Benda, RT.003/RW.010, Padurenan, Kec. Mustika Jaya, Kota Bks, Jawa Barat</p>
+                            <p>Jl. Benda, RT.003 RW.010, Padurenan, Kec. Mustika Jaya, Kota Bekasi, Jawa Barat 17156</p>
                         </div>
                         <div className="text-col">
                             <span>Telp</span>
@@ -26,6 +26,10 @@ const LocationSection = () => {
                             <div className='col-logo'>
                                 <FontAwesomeIcon icon={faLinkedin} />
                                 <a className='link-logo' target="_blank " href="https://www.linkedin.com/in/pt-altindo-mitra-perkasa-7b943a259/">PT ALTINDO MITRA PERKASA</a>
+                            </div>
+                            <div className='col-logo'>
+                                <FontAwesomeIcon icon={faTiktok} />
+                                <a className='link-logo' target="_blank " href="https://www.tiktok.com/@altindomitraperkasa?is_from_webapp=1&sender_device=pc">@altindomitraperkasa</a>
                             </div>
                         </div>
                     </div>
@@ -46,7 +50,7 @@ const LocationSection = () => {
                     <div className='text'>
                         <div className="text-col">
                             <span>Alamat</span>
-                            <p>Jl. Benda, RT.003/RW.010, Padurenan, Kec. Mustika Jaya, Kota Bks, Jawa Barat</p>
+                            <p>Jl. Benda, RT.003 RW.010, Padurenan, Kec. Mustika Jaya, Kota Bekasi, Jawa Barat 17156</p>
                         </div>
                         <div className="text-col">
                             <span>Telp</span>
@@ -61,6 +65,10 @@ const LocationSection = () => {
                             <div className='col-logo'>
                                 <FontAwesomeIcon icon={faLinkedin} />
                                 <a className='link-logo' target="_blank " href="https://www.linkedin.com/in/pt-altindo-mitra-perkasa-7b943a259/">PT ALTINDO MITRA PERKASA</a>
+                            </div>
+                            <div className='col-logo'>
+                                <FontAwesomeIcon icon={faTiktok} />
+                                <a className='link-logo' target="_blank " href="https://www.tiktok.com/@altindomitraperkasa?is_from_webapp=1&sender_device=pc">@altindomitraperkasa</a>
                             </div>
                         </div>
                     </div>

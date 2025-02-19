@@ -141,7 +141,7 @@ export const project = [
         img: Furniture
     },
     {
-        nameProduct: 'Panel Distrik',
+        nameProduct: 'Electrical',
         img: PanelListrik
     },
 ]
@@ -149,42 +149,60 @@ export const project = [
 
 export const customer = [
     {
-        img: Daikin
+        img: Daikin,
+        id: 'primafood'
     }, {
-        img: Nissin
+        img: Nissin,
+        id: 'primafood'
     }, {
-        img: Aruna
+        img: Aruna,
+        id: 'primafood'
     }, {
-        img: TjForgce
+        img: TjForgce,
+        id: 'primafood'
     }, {
-        img: Antika
+        img: Antika,
+        id: 'primafood'
     }, {
-        img: Inaco
+        img: Inaco,
+        id: 'primafood'
     },
     {
-        img: Mjm
+        img: Mjm,
+        id: 'primafood'
     },
     {
-        img: Yanmar
+        img: Yanmar,
+        id: 'primafood'
     }, {
-        img: Kopi
+        img: Kopi,
+        id: 'primafood'
     }, {
-        img: Piaggio
+        img: Piaggio,
+        id: 'primafood'
     }, {
-        img: Plastic
+        img: Plastic,
+        id: 'primafood'
     }, {
-        img: Ssk
+        img: GlobalDairi,
+        id: 'primafood'
     }, {
-        img: Dragon
+        img: Dragon,
+        id: 'primafood'
     }, {
-        img: Kawasaki
+        img: Kawasaki,
+        id: 'primafood'
     }, {
-        img: Nippon
+        img: Nippon,
+        id: 'primafood'
     }, {
-        img: PrimaFood
+        img: PrimaFood,
+        id: 'primafood'
     }, {
-        img: PrimaTopBoga
+        img: PrimaTopBoga,
+        id: 'primatopboga'
     }, {
-        img: GlobalDairi
+        img: Ssk,
+        id: 'ssk'
     }
 ]
