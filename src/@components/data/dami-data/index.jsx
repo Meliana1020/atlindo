@@ -193,9 +193,6 @@ export const customer = [
         img: Kawasaki,
         id: 'primafood'
     }, {
-        img: Nippon,
-        id: 'primafood'
-    }, {
         img: PrimaFood,
         id: 'primafood'
     }, {
@@ -204,5 +201,8 @@ export const customer = [
     }, {
         img: Ssk,
         id: 'ssk'
+    }, {
+        img: Nippon,
+        id: 'primafood'
     }
 ]
