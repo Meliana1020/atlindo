@@ -178,9 +178,6 @@ export const customer = [
         img: Kopi,
         id: 'primafood'
     }, {
-        img: GlobalDairi,
-        id: 'primafood'
-    }, {
         img: Dragon,
         id: 'primafood'
     }, {
@@ -199,6 +196,9 @@ export const customer = [
     }, {
         img: PrimaTopBoga,
         id: 'primatopboga'
+    }, {
+        img: GlobalDairi,
+        id: 'primafood'
     }, {
         img: Ssk,
         id: 'ssk'
