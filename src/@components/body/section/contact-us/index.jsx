@@ -1,5 +1,5 @@
 import './index.scss'
-import fotoContractur from '../../../data/images/Contact-us.jpg'
+import fotoContractur from '../../../data/images/img-project/Fabrication.jpg'
 
 const ContactUsSection = () => {
     return (

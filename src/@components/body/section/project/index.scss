@@ -8,17 +8,26 @@
     .project {
 
         .slider-container {
+            overflow: hidden;
 
             .slick-prev,
             .slick-next {
                 display: none !important;
             }
 
+            .slick-slide {
+                    margin-right: 20px;
+                    width: auto !important;
+                }
+
             .custom-next-arrow,
             .custom-prev-arrow {
                 display: block !important;
             }
 
+             &:last-child {
+             margin-right: 0; 
+            }
 
             .slick-img {
                 position: relative;

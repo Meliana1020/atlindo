@@ -84,7 +84,7 @@ function SamplePrevArrow(props) {
 
 export const SlickProject = ({ getWitdh }) => {
     const slideToShow = getWitdh > 700 ? 3 : 1
-    const variableWidth = getWitdh > 700 ? false : true
+    const variableWidth = false;
     const settings = {
         dots: false,
         infinite: true,

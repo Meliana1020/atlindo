@@ -15,7 +15,7 @@ const ProjectSection = () => {
         }
         window.addEventListener('resize', handleResize)
         handleResize()
-        return () => window.addEventListener('resize', handleResize)
+        return () => window.removeEventListener('resize', handleResize)
     }, [])
 
 

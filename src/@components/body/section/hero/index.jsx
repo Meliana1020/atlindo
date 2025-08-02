@@ -1,70 +1,100 @@
+import React, { useRef, useState, useEffect } from "react";
+import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
-import './index.scss'
 import { heroSection } from "../../../data/dami-data";
-import { useEffect, useRef, useState } from "react";
-
+import "./index.scss";
 
 const HeroSection = () => {
-    const sliderRef = useRef(null);
-    const [getWitdh, setGetWitdh] = useState({
-        width: undefined
-    })
+  const [windowWidth, setWindowWidth] = useState(
+    typeof window !== "undefined" ? window.innerWidth : 1200
+  );
+  //   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  // Settings for slider
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    arrows: false,
+    adaptiveHeight: true,
+  };
 
-    const settings = {
-        infinite: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 2500,
-        speed: 1000,
-        cssEase: "ease-in-out",
-        pauseOnHover: false,
-        centerPadding: "60px",
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
     };
 
-    useEffect(() => {
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
-        function handleResize() {
-            const witdh = document.documentElement.clientWidth
-            setGetWitdh(witdh)
-        }
-        window.addEventListener('resize', handleResize)
-        handleResize()
-        return () => window.addEventListener('resize', handleResize)
-    }, [])
+  return (
+    <div className="hero-wrapper">
+      {/* Navigation Header */}
 
+      {/* Hero Slider */}
+      <div className="hero-slider-container">
+        <Slider {...settings}>
+          {heroSection.map((item, index) => (
+            <div key={index} className="hero-slide">
+              <div className="slide-image-container">
+                <img
+                  src={windowWidth > 768 ? item.img : item.imgMobile}
+                  alt={`Slide ${index + 1}`}
+                  className="slide-image"
+                />
+                <div className="image-overlay"></div>
+              </div>
 
-    return (
-        <div className="container-hero">
-            <div className="slider-wrapper marg-all" >
-                <Slider ref={sliderRef} {...settings}>
-                    {
-                        getWitdh > 700 ?
-                            heroSection.map((item, index) => {
-                                const img = item.img
-                                return (
-                                    <div key={index} className='slider-item' >
-                                        <img src={img} className="slider-img" onClick={() => { console.log('index', index) }} />
-                                    </div>
-                                )
-                            })
-                            :
-                            heroSection.map((item, index) => {
-                                const img = item.imgMobile
-                                return (
-                                    <div key={index} className='slider-item' >
-                                        <img src={img} className="slider-img" onClick={() => { console.log('index', index) }} />
-                                    </div>
-                                )
-                            })
-                    }
-                </Slider>
+              <div className="slide-content">
+                <h1>Engineering Excellence</h1>
+                <h2>Building Indonesia's Future</h2>
+                <p>
+                  PT ALTINDO MITRA PERKASA - Your trusted partner in
+                  construction and engineering
+                </p>
+
+                <div className="button-group">
+                  <a href="#about" className="primary-button">
+                    Learn More
+                  </a>
+                  <a href="#contact" className="secondary-button">
+                    Contact Us
+                  </a>
+                </div>
+              </div>
             </div>
+          ))}
+        </Slider>
+
+        {/* Stats Badge */}
+        <div className="stats-badge">
+          <div className="stats-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fillRule="evenodd"
+                d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z"
+                clipRule="evenodd"
+              />
+            </svg>
+          </div>
+          <div className="stats-text">
+            <span>50+</span>
+            <p>Successful Projects</p>
+          </div>
         </div>
-    );
-}
+      </div>
+    </div>
+  );
+};
 
 export default HeroSection;
