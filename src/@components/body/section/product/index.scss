@@ -1,10 +1,10 @@
 .product-catalog {
-  padding: 80px 0;
+  padding: 40px 0;
   background-color: #f97316;
 
   .catalog-header {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 
     h2, h1 {
       font-size: 2.5rem;
@@ -23,7 +23,7 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 
     .category-btn {
       background: none;

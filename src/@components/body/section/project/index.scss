@@ -1,4 +1,4 @@
-.container-project {
+.container-project{
     display: flex;
     flex-direction: column;
     gap: 50px;
@@ -16,7 +16,7 @@
 
             .slick-slide {
                     margin-right: 20px;
-                    width: auto !important;
+                    // width: auto !important;
                 }
 
             .custom-next-arrow,
@@ -60,7 +60,6 @@
         .project {
 
             .slider-container {
-
 
                 .slick-slide {
                     margin-right: 20px;

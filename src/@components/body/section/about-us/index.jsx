@@ -25,8 +25,8 @@ const AboutUsSection = () => {
   const sectionRef = useRef(null);
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [windowWidth, setWindowWidth] = useState(
-      typeof window !== "undefined" ? window.innerWidth : 1200
-    );
+    typeof window !== "undefined" ? window.innerWidth : 1200
+  );
 
   const tabs = [
     { id: "story", label: "Our Story", icon: "📖" },
@@ -93,8 +93,6 @@ const AboutUsSection = () => {
     { name: "Places of Worship", icon: "🕌" },
     { name: "Airports", icon: "✈️" },
   ];
-
-
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -265,10 +263,8 @@ const AboutUsSection = () => {
               <p>Let's work together to bring your vision to life</p>
               <div className="cta-buttons">
                 <button className="btn-primary">
-                 <a href="#contact" >
-                    Get Started
-                  </a>
-                  </button>
+                  <a href="#contact">Get Started</a>
+                </button>
                 <button className="btn-secondary" onClick={onOpen}>
                   View Portfolio
                 </button>
@@ -279,13 +275,13 @@ const AboutUsSection = () => {
       </section>
 
       {/* Portfolio Modal */}
-      <Modal isOpen={isOpen} onClose={onClose} size="xl">
+      <Modal isOpen={isOpen} onClose={onClose} size="xl" isCentered>
         <ModalOverlay />
         <ModalContent>
           <ModalHeader>Our Portfolio</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            <SimpleGrid columns={{ base: 1, md: 2 }} spacing={6}>
+            <SimpleGrid columns={{ base: 1, md: 1 }} spacing={6}>
               {portfolioData.map((item) => (
                 <Box
                   key={item.id}
