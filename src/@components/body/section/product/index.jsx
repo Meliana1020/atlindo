@@ -57,12 +57,19 @@ const ProductSection = () => {
         {product.length > 0 ? (
           <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={6}>
             {filteredProducts.map((item, idx) => (
-              <Card
-                key={idx}
-                boxShadow="md"
-                borderRadius="lg"
-                overflow="hidden"
-              >
+             <Card
+  key={idx}
+  border="1px solid #e28316ff" 
+  boxShadow="0 4px 10px rgba(235, 161, 65, 0.3))" 
+  borderRadius="xl"
+  overflow="hidden"
+  transition="all 0.3s ease"
+  _hover={{
+    transform: "translateY(-5px) scale(1.02)",
+    boxShadow: "0 8px 10px rgba(235, 161, 65, 0.3)",
+    borderColor: "#e28316ff", 
+  }}
+>
                 <CardBody>
                   <Image
                     src={item.img[0]}
@@ -74,7 +81,7 @@ const ProductSection = () => {
                     borderRadius="md"
                   />
                   <Stack spacing={2}>
-                    <Heading size="md">{item.nameProduct}</Heading>
+                    <Heading size="md" color="orange.400">{item.nameProduct}</Heading>
                     <Text fontSize="sm" noOfLines={3}>
                       {item.deskripsion || "Deskripsi tidak tersedia"}
                     </Text>
