@@ -3,7 +3,7 @@ import fotoContractur from '../../../data/images/img-project/Fabrication.jpg'
 
 const ContactUsSection = () => {
     return (
-        <section className='container-contact-us marg-all'>
+        <section className='container-contact-us marg-all' id="contact">
             <div className='img-contact'>
                 <img src={fotoContractur} />
             </div>

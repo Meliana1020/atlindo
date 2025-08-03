@@ -32,9 +32,9 @@ const Body = () => {
       <div className="section-contact-us" id="contact">
         <ContactUsSection />
       </div>
-      {/* <div className="section-location" id="location">
+      <div className="section-location" id="location">
         <LocationSection />
-      </div> */}
+      </div>
     </section>
   );
 };

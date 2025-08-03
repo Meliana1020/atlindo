@@ -1,109 +1,104 @@
-import { useState } from 'react'
-import './index.scss'
-import logoPt from '../data/images/Logo-Pt.jpeg'
-import { useEffect } from 'react'
-import {
-    Menu,
-    MenuButton,
-    MenuList,
-    MenuItem,
-    IconButton
-} from '@chakra-ui/react'
-import { HamburgerIcon } from '@chakra-ui/icons'
+import "./index.scss";
+import React, { useState, useEffect } from "react";
+import { IconButton, useMediaQuery } from "@chakra-ui/react";
+import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
+import { FiMail, FiPhone } from "react-icons/fi";
+import Logo from "../data/images/Logo-Pt.jpeg";
 
 const Header = () => {
-    const [active, setActive] = useState('')
+  const [showMenu, setShowMenu] = useState(false);
+  const [isMobile] = useMediaQuery("(max-width: 768px)");
+  const toggleMenu = () => setShowMenu(!showMenu);
+const [activeSection, setActiveSection] = useState("");
 
-    const handleScroll = (sectionId) => {
-        const targetSection = document.getElementById(sectionId)
+  const menuItems = [
+    "About",
+    "Product",
+    "Project",
+    "Customer",
+    "Contact Us",
+    "Location",
+  ];
 
-        if (targetSection) {
-            const offset = sectionId == 'product' ? 40 : 70
-            const topPosition = targetSection.getBoundingClientRect().top + window.scrollY - offset
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = document.querySelectorAll("section[id], div[id]");
+      let currentSection = "";
 
-            window.scrollTo({
-                top: topPosition,
-                behavior: 'smooth',
-            });
+      sections.forEach((section) => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= 100 && rect.bottom >= 100) {
+          currentSection = section.id;
         }
-        setActive(sectionId || '')
+      });
+
+      setActiveSection(currentSection);
     };
 
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // inisialisasi pertama kali
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
-    useEffect(() => {
+  return (
+    <header className="header">
+      <div className="top-bar">
+        <img src={Logo} alt="Logo PT" />
+        <div className="contact">
+          <p>
+            <FiMail /> atlindo@example.com
+          </p>
+          <p>
+            <FiPhone /> 0812-3456-7890
+          </p>
+        </div>
+      </div>
 
-        const sections = ['about', 'product', 'project', 'customer', 'contact', 'location'];
+      <div className="nav-bar">
+        {isMobile ? (
+          <>
+            <IconButton
+              aria-label="Toggle Menu"
+              icon={showMenu ? <CloseIcon /> : <HamburgerIcon />}
+              onClick={toggleMenu}
+              className="menu-toggle"
+            />
+            {showMenu && (
+              <div className="mobile-menu">
+                {menuItems.map((item) => {
+                  const id = item.toLowerCase().replace(/\s+/g, "-");
+                  return (
+                    <a
+                      key={item}
+                      href={`#${id}`}
+                      className={activeSection === id ? "active" : ""}
+                    >
+                      {item}
+                    </a>
+                  );
+                })}
+              </div>
+            )}
+          </>
+        ) : (
+          <nav className="menu">
+            {menuItems.map((item) => {
+              const id = item.toLowerCase().replace(/\s+/g, "-");
+              return (
+                <a
+                  key={item}
+                  href={`#${id}`}
+                  className={activeSection === id ? "active" : ""}
+                >
+                  {item}
+                </a>
+              );
+            })}
+          </nav>
+        )}
+      </div>
+    </header>
+  );
+};
 
-        const handleScrollChange = () => {
-            let currentSection = '';
-
-            sections.forEach((section) => {
-                const element = document.getElementById(section);
-                if (element) {
-                    const rect = element.getBoundingClientRect();
-                    if (rect.top <= 100 && rect.bottom >= 100) {
-                        currentSection = section;
-                    }
-                }
-            });
-
-            setActive(currentSection);
-        };
-
-        window.addEventListener('scroll', handleScrollChange);
-        handleScrollChange(); // Panggil saat pertama kali
-
-        return () => {
-            window.removeEventListener('scroll', handleScrollChange);
-        };
-    }, []);
-
-    return (
-        <section className="container-header">
-            <div className="logo" onClick={() => handleScroll('dashboard')}>
-                <img src={logoPt} alt='gambar' />
-            </div>
-            <div className="navbar-menu">
-                <p onClick={() => { handleScroll('about'); }} style={active == 'about' ? { color: '#F58322' } : { color: 'black' }}>About Us</p>
-                <p onClick={() => { handleScroll('product'); }} style={active == 'product' ? { color: '#F58322' } : { color: 'black' }}>Product</p>
-                <p onClick={() => { handleScroll('project'); }} style={active == 'project' ? { color: '#F58322' } : { color: 'black' }}>Project</p>
-                <p onClick={() => { handleScroll('customer'); }} style={active == 'customer' ? { color: '#F58322' } : { color: 'black' }}>Our Customer</p>
-                <p onClick={() => { handleScroll('contact'); }} style={active == 'contact' ? { color: '#F58322' } : { color: 'black' }}>Contact Us</p>
-                <p onClick={() => { handleScroll('location'); }} style={active == 'location' ? { color: '#F58322' } : { color: 'black' }}>Location</p>
-            </div>
-            <div className='navbar-menu-mobile'>
-                <Menu>
-                    <MenuButton
-                        as={IconButton}
-                        aria-label='Options'
-                        icon={<HamburgerIcon />}
-                        variant='outline'
-                        className='menu-button'
-                    />
-                    <MenuList className='menu-list'>
-                        <MenuItem className='item' onClick={() => { handleScroll('about'); }} style={active == 'about' ? { color: '#F58322' } : { color: 'black' }} >
-                            About Us
-                        </MenuItem>
-                        <MenuItem className='item' onClick={() => { handleScroll('product'); }} style={active == 'product' ? { color: '#F58322' } : { color: 'black' }}>
-                            Product
-                        </MenuItem>
-                        <MenuItem className='item' onClick={() => { handleScroll('project'); }} style={active == 'project' ? { color: '#F58322' } : { color: 'black' }}>
-                            Project
-                        </MenuItem>
-                        <MenuItem className='item' onClick={() => { handleScroll('customer'); }} style={active == 'customer' ? { color: '#F58322' } : { color: 'black' }}>
-                            Our Customer
-                        </MenuItem>
-                        <MenuItem className='item' onClick={() => { handleScroll('contact'); }} style={active == 'contact' ? { color: '#F58322' } : { color: 'black' }}>
-                            Contact Us
-                        </MenuItem>
-                        <MenuItem className='item' onClick={() => { handleScroll('location'); }} style={active == 'location' ? { color: '#F58322' } : { color: 'black' }}>
-                            Location
-                        </MenuItem>
-                    </MenuList>
-                </Menu>
-            </div>
-        </section>
-    )
-}
-export default Header
-
+export default Header;

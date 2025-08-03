@@ -6,10 +6,10 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import "./index.scss";
 
-const LocationSection = () => {
+const LocationSection= () => {
   return (
     <>
-      <section className="container-location marg-all">
+      <section className="container-location marg-all" id="location">
         <div className="col-left">
           <h2>PT. ALTINDO MITRA PERKASA</h2>
           <div className="text">
