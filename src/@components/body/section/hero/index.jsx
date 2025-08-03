@@ -119,7 +119,7 @@ const HeroSection = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImage((prev) => (prev + 1) % images.length);
-    }, 4000); // Ganti gambar setiap 4 detik
+    }, 4000);
     return () => clearInterval(interval);
   }, []);
 
@@ -146,14 +146,13 @@ const HeroSection = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.5, duration: 1 }}
         >
-          <Text className="tagline">AWARD-WINNING CONSTRUCTION EXCELLENCE</Text>
+          <Text className="tagline">ENGINEERING EXCELLENCE</Text>
           <Heading className="main-heading">
-            Where Innovation Drives <br />
-            <span>Structural Perfection</span>
+            Building Indonesian's Future <br />
+            <span>PT Altindo Mitra Perkasa</span>
           </Heading>
           <Text className="description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua.
+            You Trusted Partner in Construction and Engineering
           </Text>
 
           <Wrap spacing="10px" mt={4}>

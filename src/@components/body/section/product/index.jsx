@@ -19,8 +19,9 @@ import {
   ModalBody,
   ModalFooter,
   useDisclosure,
+  SimpleGrid,
 } from "@chakra-ui/react";
-import { product } from "../../../data/dami-data";
+import { product, portfolioData } from "../../../data/dami-data";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -108,16 +109,36 @@ const ProductSection = () => {
           <ModalHeader>{selectedProduct?.nameProduct}</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            <Image
-              src={isMobile ? selectedProduct?.imgMobile[0] : selectedProduct?.img[0]}
-              alt={selectedProduct?.nameProduct}
-              borderRadius="md"
-              mb={4}
-              w="100%"
-              h="250px"
-              objectFit="cover"
-            />
-            <Text>{selectedProduct?.deskripsion || "Deskripsi tidak tersedia"}</Text>
+             <SimpleGrid columns={{ base: 1, md: 2 }} spacing={6}>
+                          {portfolioData.map((item) => (
+                            <Box
+                              key={item.id}
+                              bg="white"
+                              boxShadow="md"
+                              borderRadius="lg"
+                              overflow="hidden"
+                            >
+                              <Image
+                                src={item.img}
+                                alt={item.title}
+                                objectFit="cover"
+                                w="100%"
+                                h="200px"
+                              />
+                              <Box p={4}>
+                                <Heading as="h3" size="md" mb={1}>
+                                  {item.title}
+                                </Heading>
+                                <Text fontSize="sm" color="gray.500">
+                                  {item.category} • {item.year}
+                                </Text>
+                                <Text mt={2} fontSize="sm">
+                                  {item.description}
+                                </Text>
+                              </Box>
+                            </Box>
+                          ))}
+                        </SimpleGrid>
           </ModalBody>
           <ModalFooter>
             <Button colorScheme="gray" onClick={onClose}>
