@@ -98,17 +98,31 @@
 // };
 
 // export default HeroSection;
-
 import { Box, Button, Flex, Heading, Image, Text, Wrap, WrapItem } from "@chakra-ui/react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { useEffect, useState } from "react";
 import "./index.scss";
-import heroImg from "../../../data/images/img-project/Fabrication.jpg";
 
-// Ubah Chakra Box jadi MotionBox
+import heroImg1 from "../../../data/images/img-project/Fabrication.jpg";
+import heroImg2 from "../../../data/images/img-project/Contruction.jpg";
+import heroImg3 from "../../../data/images/img-project/Furniture.jpg";
+
 const MotionBox = motion(Box);
 const MotionFlex = motion(Flex);
+const MotionImage = motion(Image);
+
+const images = [heroImg1, heroImg2, heroImg3];
 
 const HeroSection = () => {
+  const [currentImage, setCurrentImage] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImage((prev) => (prev + 1) % images.length);
+    }, 4000); // Ganti gambar setiap 4 detik
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <MotionBox
       className="hero-section"
@@ -160,7 +174,21 @@ const HeroSection = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.7, duration: 1 }}
         >
-          <Image src={heroImg} alt="Hero" className="hero-image" />
+          <AnimatePresence mode="wait">
+            <MotionImage
+              key={currentImage}
+              src={images[currentImage]}
+              alt="Hero"
+              className="hero-image"
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 1.05 }}
+              transition={{ duration: 0.8 }}
+              rounded="md"
+              w="full"
+            />
+          </AnimatePresence>
+
           <Box className="hero-stat-box">
             <Flex justify="space-around" align="center">
               <Box textAlign="center">
