@@ -18,20 +18,6 @@
   }
 }
 
-  .col-top {
-    width: 100%;
-    padding: 20px;
-    box-sizing: border-box;
-
-    iframe {
-      width: 100%;
-      height: auto;
-      aspect-ratio: 16 / 9;
-      border-radius: 12px;
-      display: block;
-    }
-  }
-
 // Lokasi Desktop
 .container-location {
   display: flex;

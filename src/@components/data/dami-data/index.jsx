@@ -33,6 +33,11 @@ import KawatLas from "../images/img-product/mechanical/Kawat-las.jpg";
 import BearingMobile from "../images/img-product/mechanical/mobile/Bearing-mobile.jpg";
 import KawatLasMobile from "../images/img-product/mechanical/mobile/Kawat-las-mobile.jpg";
 import PompaMobile from "../images/img-product/mechanical/mobile/Pompa-mobile.jpg";
+import SafetyHelmet from "../images/img-product/general trading/safety helmet.jpg";
+import SteelStructureFrame from "../images/img-product/fabrication/steel-structure-frame.jpg";
+import MetalGateFabrication from "../images/img-product/fabrication/metal-gate-fabrication.jpg"
+import KitchenInterior1 from "../images/img-product/interior/dapur1.jpg";
+import KitchenInterior2 from "../images/img-product/interior/dapur2.jpg";
 
 // import an img Logo
 import Yanmar from "../images/yanmar.png";
@@ -73,79 +78,102 @@ export const heroSection = [
 ];
 
 export const product = [
+  // General Trading
   {
-    nameProduct: "General Trading",
-    deskripsion: `Kami menyediakan berbagai kebutuhan umum untuk proyek konstruksi dan industri, termasuk peralatan safety, material bangunan, dan perlengkapan kerja.`,
-    img: [
-      "https://sanotoshiindonesia.com/wp-content/uploads/2023/06/General-Trading-Produksi.jpg",
-      "https://www.royalspace.ae/static/uploads/news/large/benefits-of-general-trading-company.jpg",
-      "https://images.unsplash.com/photo-1581094271901-8022df4466f9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
-    ],
-    imgMobile: [
-      "https://images.unsplash.com/photo-1581093057307-9c4d4c73a603?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80",
-      "https://images.unsplash.com/photo-1581093450021-4a7360e9a7f8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80",
-      "https://images.unsplash.com/photo-1581094271901-8022df4466f9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80",
-    ],
+    nameProduct: "Industrial Gloves",
+    deskripsion: "Durable gloves for industrial use, resistant to heat and chemicals.",
+    kategoriProduct: "General Trading",
+    img: [SarungTanganMobile]
   },
   {
-    nameProduct: "Fabrication",
-    deskripsion: `Layanan fabrikasi custom untuk berbagai kebutuhan industri termasuk struktur baja, rak industri, dan komponen mekanik presisi.`,
-    img: [
-      "https://images.unsplash.com/photo-1597852074816-d933c7d2b988?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1607346256330-dee7af15f7c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
-    ],
-    imgMobile: [
-      "https://images.unsplash.com/photo-1597852074816-d933c7d2b988?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80",
-      "https://images.unsplash.com/photo-1607346256330-dee7af15f7c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80",
-      "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80",
-    ],
+    nameProduct: "Safety Helmet",
+    deskripsion: "Protective helmet suitable for construction and industrial areas.",
+    kategoriProduct: "General Trading",
+    img: [SafetyHelmet]
+  },
+
+  // Fabrication
+  {
+    nameProduct: "Steel Structure Frame",
+    deskripsion: "Custom-built steel frame for industrial buildings and warehouses.",
+    kategoriProduct: "Fabrication",
+    img: [SteelStructureFrame]
   },
   {
-    nameProduct: "Machining",
-    deskripsion: `Pemesinan presisi untuk komponen industri dengan teknologi CNC dan konvensional untuk hasil yang akurat dan berkualitas tinggi.`,
-    img: [Bearing, KawatLas, Pompa],
-    imgMobile: [BearingMobile, KawatLasMobile, PompaMobile],
+    nameProduct: "Metal Gate Fabrication",
+    deskripsion: "High-quality metal gates fabricated with precision.",
+    kategoriProduct: "Fabrication",
+    img: [MetalGateFabrication]
+  },
+
+  // Machining
+  {
+    nameProduct: "Bearing Mobile",
+    deskripsion: "Precision machined components made using CNC milling machines.",
+    kategoriProduct: "Machining",
+    img: [BearingMobile]
   },
   {
-    nameProduct: "Interior",
-    deskripsion: `Solusi interior komersial dan residensial termasuk partisi, furniture custom, dan elemen dekoratif untuk berbagai kebutuhan.`,
-    img: [
-      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
-    ],
-    imgMobile: [
-      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80",
-      "https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80",
-      "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80",
-    ],
+    nameProduct: "Kawat Las Mobile",
+    deskripsion: "Custom lathe shafts with tight tolerance machining.",
+    kategoriProduct: "Machining",
+    img: [KawatLasMobile]
+  },
+
+  // Interior
+  {
+    nameProduct: "Modern Kitchen",
+    deskripsion: "Sleek and ergonomic desk for modern office spaces.",
+    kategoriProduct: "Interior",
+    img: [KitchenInterior1]
   },
   {
-    nameProduct: "Construction",
-    deskripsion: `Material dan jasa konstruksi berkualitas untuk proyek bangunan, infrastruktur, dan pengembangan properti.`,
-    img: [SarungTangan, MaskingLine, KunciInggris],
-    imgMobile: [SarungTanganMobile, MaskingLineMobile, KunciInggrisMobile],
+    nameProduct: "Modern Kitchen Cobinet",
+    deskripsion: "Aesthetic wooden paneling for walls and ceilings.",
+    kategoriProduct: "Interior",
+    img: [KitchenInterior2]
+  },
+
+  // Construction
+  {
+    nameProduct: "Steel Rebar",
+    deskripsion: "Strong and flexible rebar for concrete reinforcement.",
+    kategoriProduct: "Construction",
+    img: [PompaMobile]
   },
   {
-    nameProduct: "Electrical",
-    deskripsion: `Perlengkapan dan instalasi elektrikal untuk kebutuhan komersial, industri, dan residensial.`,
-    img: [Lampu, Cctv, AccessControl],
-    imgMobile: [LampuMobile, CctvMobile, AccessControlMobile],
+    nameProduct: "Precast Concrete",
+    deskripsion: "Precast concrete elements for faster construction timelines.",
+    kategoriProduct: "Construction",
+    img: [KunciInggrisMobile]
+  },
+
+  // Electrical
+  {
+    nameProduct: "Cable Tray System",
+    deskripsion: "Robust cable tray systems for electrical installations.",
+    kategoriProduct: "Electrical",
+    img: [Lampu]
   },
   {
-    nameProduct: "Security System",
-    deskripsion: `Sistem keamanan terintegrasi termasuk CCTV, access control, alarm, dan solusi monitoring 24/7.`,
-    img: [
-      "https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1581094271901-8022df4466f9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
-    ],
-    imgMobile: [
-      "https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80",
-      "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80",
-      "https://images.unsplash.com/photo-1581094271901-8022df4466f9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80",
-    ],
+    nameProduct: "Power Distribution Panel",
+    deskripsion: "Control and distribute electric power with our robust panels.",
+    kategoriProduct: "Electrical",
+    img: [Cctv] 
+  },
+
+  // Security System
+  {
+    nameProduct: "CCTV Surveillance Kit",
+    deskripsion: "Complete CCTV kits for building and area monitoring.",
+    kategoriProduct: "Security System",
+    img: [Cctv]
+  },
+  {
+    nameProduct: "Biometric Door Access",
+    deskripsion: "Smart fingerprint-based access control system.",
+    kategoriProduct: "Security System",
+    img: [AccessControlMobile]
   },
 ];
 
